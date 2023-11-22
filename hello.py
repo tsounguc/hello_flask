@@ -9,6 +9,14 @@ print(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"
 
+@app.route("/bye")
+def bye():
+    return "Bye!"
+
+@app.route("/username/<name>")
+def greet(name):
+    return f"Hello {name}"
+
 # this does the same thing as the command line flask --app  hello run
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
