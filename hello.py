@@ -19,4 +19,4 @@ def greet(name):
 
 # this does the same thing as the command line flask --app  hello run
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
