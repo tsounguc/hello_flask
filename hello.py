@@ -13,9 +13,9 @@ def hello_world():
 def bye():
     return "Bye!"
 
-@app.route("/username/<name>")
-def greet(name):
-    return f"Hello {name}"
+@app.route("/username/<name>/<int:number>")
+def greet(name, number):
+    return f"Hello there {name}, you are {number} years old"
 
 # this does the same thing as the command line flask --app  hello run
 if __name__ == "__main__":
